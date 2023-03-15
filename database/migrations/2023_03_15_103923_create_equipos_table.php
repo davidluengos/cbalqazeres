@@ -21,6 +21,7 @@ class CreateEquiposTable extends Migration
             $table->foreignId('categoria_id')->references('id')->on('categorias');
             $table->string('imagen', 2048)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -17,7 +17,7 @@ class CreateNoticiasTable extends Migration
             $table->id();
             $table->dateTime('fecha')->nullable();
             $table->string('titulo', 255)->nullable();
-            $table->longText('titulo')->nullable();
+            $table->longText('contenido')->nullable();
             $table->string('imagen', 2048)->nullable();
             $table->timestamps();
             $table->softDeletes();

@@ -17,6 +17,7 @@ class CreateGenerosTable extends Migration
             $table->id();
             $table->string('nombre', 50)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

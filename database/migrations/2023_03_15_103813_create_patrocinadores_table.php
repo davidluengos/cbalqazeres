@@ -19,6 +19,7 @@ class CreatePatrocinadoresTable extends Migration
             $table->foreignId('tipo_patrocinador_id')->references('id')->on('patrocinador_tipos');
             $table->string('imagen', 2048)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

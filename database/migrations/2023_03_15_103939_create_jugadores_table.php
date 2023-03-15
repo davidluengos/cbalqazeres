@@ -22,7 +22,7 @@ class CreateJugadoresTable extends Migration
             $table->foreignId('posicion_id')->references('id')->on('posiciones');
             $table->string('imagen', 2048)->nullable();
             $table->timestamps();
-            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -26,6 +26,7 @@ class CreatePartidosTable extends Migration
             $table->integer('resultado_visitante', 3)->nullable();
             $table->boolean('alqazeres_es_local')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
