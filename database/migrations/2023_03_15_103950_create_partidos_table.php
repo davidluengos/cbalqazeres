@@ -22,8 +22,8 @@ class CreatePartidosTable extends Migration
             $table->string('pabellon', 255)->nullable();
             $table->string('localidad', 255)->nullable();
             $table->string('comentario', 255)->nullable();
-            $table->integer('resultado_local', 3)->nullable();
-            $table->integer('resultado_visitante', 3)->nullable();
+            $table->integer('resultado_local')->nullable();
+            $table->integer('resultado_visitante')->nullable();
             $table->boolean('alqazeres_es_local')->nullable();
             $table->timestamps();
             $table->softDeletes();

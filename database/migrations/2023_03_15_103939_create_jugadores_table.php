@@ -16,7 +16,7 @@ class CreateJugadoresTable extends Migration
         Schema::create('jugadores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100)->nullable();
-            $table->integer('numero', 3)->nullable();
+            $table->integer('numero')->nullable();
             $table->foreignId('equipo_id')->references('id')->on('equipos');
             $table->foreignId('rol_id')->references('id')->on('roles');
             $table->foreignId('posicion_id')->references('id')->on('posiciones');
