@@ -48,8 +48,16 @@ class EquipoController extends Controller
     public function store(Request $request)
     {
         request()->validate(Equipo::$rules);
-
         $equipo = Equipo::create($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $equipo->imagen = '/storage/img/equipos/'.$equipo->id.'/' . $nombreOriginal;
+            $file->move(public_path() . '/storage/img/equipos/' . $equipo->id.'/' , $nombreOriginal);
+            $equipo->save();
+        }
 
         return redirect()->route('equipos.index')
             ->with('success', 'Equipo created successfully.');
@@ -95,6 +103,15 @@ class EquipoController extends Controller
         request()->validate(Equipo::$rules);
 
         $equipo->update($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $equipo->imagen = '/storage/img/equipos/'.$equipo->id.'/' . $nombreOriginal;
+            $file->move(public_path() . '/storage/img/equipos/' . $equipo->id.'/' , $nombreOriginal);
+            $equipo->save();
+        }
 
         return redirect()->route('equipos.index')
             ->with('success', 'Equipo updated successfully');
