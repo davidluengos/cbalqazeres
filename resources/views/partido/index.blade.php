@@ -56,15 +56,15 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $partido->fecha }}</td>
-											<td>{{ $partido->equipo_local_id }}</td>
-											<td>{{ $partido->equipo_visitante_id }}</td>
-											<td>{{ $partido->categoria_id }}</td>
+											<td>{{ $partido->equipoLocal->nombre }}</td>
+											<td>{{ $partido->equipoVisitante->nombre }}</td>
+											<td>{{ $partido->categoria->nombre }}</td>
 											<td>{{ $partido->pabellon }}</td>
 											<td>{{ $partido->localidad }}</td>
 											<td>{{ $partido->comentario }}</td>
 											<td>{{ $partido->resultado_local }}</td>
 											<td>{{ $partido->resultado_visitante }}</td>
-											<td>{{ $partido->alqazeres_es_local }}</td>
+											<td>{{ ($partido->alqazeres_es_local == '1') ? 'Sí' : 'No'}}</td>
 
                                             <td>
                                                 <form action="{{ route('partidos.destroy',$partido->id) }}" method="POST">

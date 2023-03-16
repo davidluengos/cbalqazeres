@@ -8,17 +8,17 @@
         </div>
         <div class="form-group">
             {{ Form::label('equipo_local_id') }}
-            {{ Form::text('equipo_local_id', $partido->equipo_local_id, ['class' => 'form-control' . ($errors->has('equipo_local_id') ? ' is-invalid' : ''), 'placeholder' => 'Equipo Local Id']) }}
+            {{ Form::select('equipo_local_id', $equipos, $partido->equipo_local_id, ['class' => 'form-control' . ($errors->has('equipo_local_id') ? ' is-invalid' : ''), 'placeholder' => 'Equipo Local Id']) }}
             {!! $errors->first('equipo_local_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('equipo_visitante_id') }}
-            {{ Form::text('equipo_visitante_id', $partido->equipo_visitante_id, ['class' => 'form-control' . ($errors->has('equipo_visitante_id') ? ' is-invalid' : ''), 'placeholder' => 'Equipo Visitante Id']) }}
+            {{ Form::select('equipo_visitante_id', $equipos, $partido->equipo_visitante_id, ['class' => 'form-control' . ($errors->has('equipo_visitante_id') ? ' is-invalid' : ''), 'placeholder' => 'Equipo Visitante Id']) }}
             {!! $errors->first('equipo_visitante_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('categoria_id') }}
-            {{ Form::text('categoria_id', $partido->categoria_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Categoria Id']) }}
+            {{ Form::select('categoria_id', $categorias, $partido->categoria_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Categoria Id']) }}
             {!! $errors->first('categoria_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

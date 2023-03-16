@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
+use App\Equipo;
 use App\Partido;
 use Illuminate\Http\Request;
 
@@ -31,8 +33,10 @@ class PartidoController extends Controller
      */
     public function create()
     {
+        $equipos = Equipo::all()->pluck('nombre', 'id');
+        $categorias = Categoria::all()->pluck('nombre', 'id');
         $partido = new Partido();
-        return view('partido.create', compact('partido'));
+        return view('partido.create', compact('partido', 'equipos', 'categorias'));
     }
 
     /**
@@ -72,9 +76,11 @@ class PartidoController extends Controller
      */
     public function edit($id)
     {
+        $equipos = Equipo::all()->pluck('nombre', 'id');
+        $categorias = Categoria::all()->pluck('nombre', 'id');
         $partido = Partido::find($id);
 
-        return view('partido.edit', compact('partido'));
+        return view('partido.edit', compact('partido', 'equipos', 'categorias'));
     }
 
     /**

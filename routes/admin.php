@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\PartidoController;
 use App\Http\Controllers\PosicioneController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Auth;
@@ -71,3 +72,12 @@ Route::get('/equipos/{equipo}/ver', [EquipoController::class, 'show'])->middlewa
 Route::get('/equipos/{equipo}/editar', [EquipoController::class, 'edit'])->middleware('auth')->name('equipos.edit');
 Route::put('/equipos/{equipo}/actualizar', [EquipoController::class, 'update'])->middleware('auth')->name('equipos.update');
 Route::delete('/equipos/{equipo}/delete', [EquipoController::class, 'destroy'])->middleware('auth')->name('equipos.destroy');
+
+//Partidos
+Route::get('/partidos', [PartidoController::class, 'index'])->middleware('auth')->name('partidos.index');
+Route::get('/partidos/crear', [PartidoController::class, 'create'])->middleware('auth')->name('partidos.create');
+Route::post('/partidos/almacenar', [PartidoController::class, 'store'])->middleware('auth')->name('partidos.store');
+Route::get('/partidos/{partido}/ver', [PartidoController::class, 'show'])->middleware('auth')->name('partidos.show');
+Route::get('/partidos/{partido}/editar', [PartidoController::class, 'edit'])->middleware('auth')->name('partidos.edit');
+Route::put('/partidos/{partido}/actualizar', [PartidoController::class, 'update'])->middleware('auth')->name('partidos.update');
+Route::delete('/partidos/{partido}/delete', [PartidoController::class, 'destroy'])->middleware('auth')->name('partidos.destroy');

@@ -60,7 +60,7 @@ class Partido extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function equipo()
+    public function equipoVisitante()
     {
         return $this->hasOne('App\Equipo', 'id', 'equipo_visitante_id');
     }
@@ -68,7 +68,7 @@ class Partido extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function equipo()
+    public function equipoLocal()
     {
         return $this->hasOne('App\Equipo', 'id', 'equipo_local_id');
     }
