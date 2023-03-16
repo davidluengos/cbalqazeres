@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Documento;
+use App\Models\Documento;
 use Illuminate\Http\Request;
 
 /**

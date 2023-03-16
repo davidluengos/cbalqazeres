@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Jugadore;
+use App\Models\Jugadore;
 use Illuminate\Http\Request;
 
 /**

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Categoria;
-use App\Equipo;
-use App\Partido;
+use App\Models\Categoria;
+use App\Models\Equipo;
+use App\Models\Partido;
 use Illuminate\Http\Request;
 
 /**

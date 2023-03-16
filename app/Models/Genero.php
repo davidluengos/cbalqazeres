@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Categoria
+ * Class Genero
  *
  * @property $id
  * @property $nombre
@@ -13,11 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property $updated_at
  *
  * @property Equipo[] $equipos
- * @property Partido[] $partidos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Categoria extends Model
+class Genero extends Model
 {
     
     static $rules = [
@@ -38,15 +37,7 @@ class Categoria extends Model
      */
     public function equipos()
     {
-        return $this->hasMany('App\Equipo', 'categoria_id', 'id');
-    }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function partidos()
-    {
-        return $this->hasMany('App\Partido', 'categoria_id', 'id');
+        return $this->hasMany('App\Models\Equipo', 'genero_id', 'id');
     }
     
 

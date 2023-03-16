@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -47,7 +47,7 @@ class Equipo extends Model
      */
     public function categoria()
     {
-        return $this->hasOne('App\Categoria', 'id', 'categoria_id');
+        return $this->hasOne('App\Models\Categoria', 'id', 'categoria_id');
     }
     
     /**
@@ -55,7 +55,7 @@ class Equipo extends Model
      */
     public function genero()
     {
-        return $this->hasOne('App\Genero', 'id', 'genero_id');
+        return $this->hasOne('App\Models\Genero', 'id', 'genero_id');
     }
     
     /**
@@ -63,7 +63,7 @@ class Equipo extends Model
      */
     public function jugadores()
     {
-        return $this->hasMany('App\Jugadore', 'equipo_id', 'id');
+        return $this->hasMany('App\Models\Jugadore', 'equipo_id', 'id');
     }
     
     /**
@@ -71,7 +71,7 @@ class Equipo extends Model
      */
     public function partidosLocal()
     {
-        return $this->hasMany('App\Partido', 'equipo_local_id', 'id');
+        return $this->hasMany('App\Models\Partido', 'equipo_local_id', 'id');
     }
     
     /**
@@ -79,7 +79,7 @@ class Equipo extends Model
      */
     public function partidosVisitante()
     {
-        return $this->hasMany('App\Partido', 'equipo_visitante_id', 'id');
+        return $this->hasMany('App\Models\Partido', 'equipo_visitante_id', 'id');
     }
     
 

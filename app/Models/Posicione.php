@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -40,7 +40,7 @@ class Posicione extends Model
      */
     public function jugadores()
     {
-        return $this->hasMany('App\Jugadore', 'posicion_id', 'id');
+        return $this->hasMany('App\Models\Jugadore', 'posicion_id', 'id');
     }
     
 

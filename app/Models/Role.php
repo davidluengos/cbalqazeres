@@ -1,26 +1,24 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Noticia
+ * Class Role
  *
  * @property $id
- * @property $fecha
- * @property $titulo
- * @property $contenido
- * @property $imagen
+ * @property $nombre
  * @property $created_at
  * @property $updated_at
  * @property $deleted_at
  *
+ * @property Jugadore[] $jugadores
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Noticia extends Model
+class Role extends Model
 {
     use SoftDeletes;
 
@@ -34,8 +32,16 @@ class Noticia extends Model
      *
      * @var array
      */
-    protected $fillable = ['fecha','titulo','contenido','imagen'];
+    protected $fillable = ['nombre'];
 
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function jugadores()
+    {
+        return $this->hasMany('App\Models\Jugadore', 'rol_id', 'id');
+    }
+    
 
 }

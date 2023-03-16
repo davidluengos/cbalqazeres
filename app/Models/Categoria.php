@@ -1,27 +1,25 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Role
+ * Class Categoria
  *
  * @property $id
  * @property $nombre
  * @property $created_at
  * @property $updated_at
- * @property $deleted_at
  *
- * @property Jugadore[] $jugadores
+ * @property Equipo[] $equipos
+ * @property Partido[] $partidos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Role extends Model
+class Categoria extends Model
 {
-    use SoftDeletes;
-
+    
     static $rules = [
     ];
 
@@ -38,9 +36,17 @@ class Role extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function jugadores()
+    public function equipos()
     {
-        return $this->hasMany('App\Jugadore', 'rol_id', 'id');
+        return $this->hasMany('App\Models\Equipo', 'categoria_id', 'id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function partidos()
+    {
+        return $this->hasMany('App\Models\Partido', 'categoria_id', 'id');
     }
     
 

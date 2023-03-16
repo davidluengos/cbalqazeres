@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Noticia;
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
 /**

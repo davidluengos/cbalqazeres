@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -40,7 +40,7 @@ class Patrocinadore extends Model
      */
     public function patrocinadorTipo()
     {
-        return $this->hasOne('App\PatrocinadorTipo', 'id', 'tipo_patrocinador_id');
+        return $this->hasOne('App\Models\PatrocinadorTipo', 'id', 'tipo_patrocinador_id');
     }
     
 

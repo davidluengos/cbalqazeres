@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\PatrocinadorTipo;
+use App\Models\PatrocinadorTipo;
 use Illuminate\Http\Request;
 
 /**

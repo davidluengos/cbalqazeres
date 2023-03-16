@@ -1,24 +1,29 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Genero
+ * Class Noticia
  *
  * @property $id
- * @property $nombre
+ * @property $fecha
+ * @property $titulo
+ * @property $contenido
+ * @property $imagen
  * @property $created_at
  * @property $updated_at
+ * @property $deleted_at
  *
- * @property Equipo[] $equipos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Genero extends Model
+class Noticia extends Model
 {
-    
+    use SoftDeletes;
+
     static $rules = [
     ];
 
@@ -29,16 +34,8 @@ class Genero extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre'];
+    protected $fillable = ['fecha','titulo','contenido','imagen'];
 
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function equipos()
-    {
-        return $this->hasMany('App\Equipo', 'genero_id', 'id');
-    }
-    
 
 }

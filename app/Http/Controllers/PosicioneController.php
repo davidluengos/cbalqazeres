@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Posicione;
+use App\Models\Posicione;
 use Illuminate\Http\Request;
 
 /**

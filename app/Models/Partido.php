@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -54,7 +54,7 @@ class Partido extends Model
      */
     public function categoria()
     {
-        return $this->hasOne('App\Categoria', 'id', 'categoria_id');
+        return $this->hasOne('App\Models\Categoria', 'id', 'categoria_id');
     }
     
     /**
@@ -62,7 +62,7 @@ class Partido extends Model
      */
     public function equipoVisitante()
     {
-        return $this->hasOne('App\Equipo', 'id', 'equipo_visitante_id');
+        return $this->hasOne('App\Models\Equipo', 'id', 'equipo_visitante_id');
     }
     
     /**
@@ -70,7 +70,7 @@ class Partido extends Model
      */
     public function equipoLocal()
     {
-        return $this->hasOne('App\Equipo', 'id', 'equipo_local_id');
+        return $this->hasOne('App\Models\Equipo', 'id', 'equipo_local_id');
     }
     
 
