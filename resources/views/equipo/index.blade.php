@@ -51,9 +51,9 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $equipo->nombre }}</td>
-											<td>{{ $equipo->pertenece_al_club }}</td>
-											<td>{{ $equipo->genero_id }}</td>
-											<td>{{ $equipo->categoria_id }}</td>
+											<td>{{ ($equipo->pertenece_al_club == '1') ? 'Sí' : 'No'}}</td>
+											<td>{{ $equipo->genero->nombre }}</td>
+											<td>{{ $equipo->categoria->nombre }}</td>
 											<td>{{ $equipo->imagen }}</td>
 
                                             <td>

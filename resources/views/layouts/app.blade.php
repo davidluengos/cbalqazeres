@@ -39,6 +39,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('posiciones.index') }}">Posiciones</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('categorias.index') }}">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('generos.index') }}">Géneros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('equipos.index') }}">Equipos</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

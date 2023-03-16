@@ -13,12 +13,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('genero_id') }}
-            {{ Form::text('genero_id', $equipo->genero_id, ['class' => 'form-control' . ($errors->has('genero_id') ? ' is-invalid' : ''), 'placeholder' => 'Genero Id']) }}
+            {{ Form::select('genero_id', $generos, $equipo->genero_id, ['class' => 'form-control' . ($errors->has('genero_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('genero_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('categoria_id') }}
-            {{ Form::text('categoria_id', $equipo->categoria_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Categoria Id']) }}
+            {{ Form::select('categoria_id', $categorias, $equipo->categoria_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('categoria_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

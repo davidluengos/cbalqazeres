@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
 use App\Equipo;
+use App\Genero;
 use Illuminate\Http\Request;
 
 /**
@@ -31,8 +33,10 @@ class EquipoController extends Controller
      */
     public function create()
     {
+        $generos = Genero::all()->pluck('nombre', 'id');
+        $categorias = Categoria::all()->pluck('nombre', 'id');
         $equipo = new Equipo();
-        return view('equipo.create', compact('equipo'));
+        return view('equipo.create', compact('equipo', 'categorias', 'generos'));
     }
 
     /**
@@ -72,9 +76,11 @@ class EquipoController extends Controller
      */
     public function edit($id)
     {
+        $generos = Genero::all()->pluck('nombre', 'id');
+        $categorias = Categoria::all()->pluck('nombre', 'id');
         $equipo = Equipo::find($id);
 
-        return view('equipo.edit', compact('equipo'));
+        return view('equipo.edit', compact('equipo', 'categorias', 'generos'));
     }
 
     /**

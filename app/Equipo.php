@@ -69,7 +69,7 @@ class Equipo extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function partidos()
+    public function partidosLocal()
     {
         return $this->hasMany('App\Partido', 'equipo_local_id', 'id');
     }
@@ -77,7 +77,7 @@ class Equipo extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function partidos()
+    public function partidosVisitante()
     {
         return $this->hasMany('App\Partido', 'equipo_visitante_id', 'id');
     }
