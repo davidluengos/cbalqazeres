@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\JugadoreController;
 use App\Http\Controllers\PartidoController;
 use App\Http\Controllers\PosicioneController;
 use App\Http\Controllers\RoleController;
@@ -81,3 +82,12 @@ Route::get('/partidos/{partido}/ver', [PartidoController::class, 'show'])->middl
 Route::get('/partidos/{partido}/editar', [PartidoController::class, 'edit'])->middleware('auth')->name('partidos.edit');
 Route::put('/partidos/{partido}/actualizar', [PartidoController::class, 'update'])->middleware('auth')->name('partidos.update');
 Route::delete('/partidos/{partido}/delete', [PartidoController::class, 'destroy'])->middleware('auth')->name('partidos.destroy');
+
+//Jugadores
+Route::get('/jugadores', [JugadoreController::class, 'index'])->middleware('auth')->name('jugadores.index');
+Route::get('/jugadores/crear', [JugadoreController::class, 'create'])->middleware('auth')->name('jugadores.create');
+Route::post('/jugadores/almacenar', [JugadoreController::class, 'store'])->middleware('auth')->name('jugadores.store');
+Route::get('/jugadores/{jugadore}/ver', [JugadoreController::class, 'show'])->middleware('auth')->name('jugadores.show');
+Route::get('/jugadores/{jugadore}/editar', [JugadoreController::class, 'edit'])->middleware('auth')->name('jugadores.edit');
+Route::put('/jugadores/{jugadore}/actualizar', [JugadoreController::class, 'update'])->middleware('auth')->name('jugadores.update');
+Route::delete('/jugadores/{jugadore}/delete', [JugadoreController::class, 'destroy'])->middleware('auth')->name('jugadores.destroy');

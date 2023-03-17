@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Equipo;
 use App\Models\Jugadore;
+use App\Models\Posicione;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 /**
@@ -31,8 +34,11 @@ class JugadoreController extends Controller
      */
     public function create()
     {
+        $posiciones = Posicione::all()->pluck('nombre', 'id');
+        $equipos = Equipo::all()->pluck('nombre', 'id');
+        $roles = Role::all()->pluck('nombre', 'id');
         $jugadore = new Jugadore();
-        return view('jugadore.create', compact('jugadore'));
+        return view('jugadore.create', compact('jugadore', 'posiciones', 'equipos', 'roles'));
     }
 
     /**
@@ -46,6 +52,15 @@ class JugadoreController extends Controller
         request()->validate(Jugadore::$rules);
 
         $jugadore = Jugadore::create($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $jugadore->imagen = '/storage/img/equipos/'.$jugadore->equipo_id.'/'.$nombreOriginal;
+            $file->move(public_path() . '/storage/img/equipos/' . $jugadore->equipo_id.'/' , $nombreOriginal);
+            $jugadore->save();
+        }
 
         return redirect()->route('jugadores.index')
             ->with('success', 'Jugadore created successfully.');

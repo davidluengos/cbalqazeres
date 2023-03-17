@@ -13,22 +13,22 @@
         </div>
         <div class="form-group">
             {{ Form::label('equipo_id') }}
-            {{ Form::text('equipo_id', $jugadore->equipo_id, ['class' => 'form-control' . ($errors->has('equipo_id') ? ' is-invalid' : ''), 'placeholder' => 'Equipo Id']) }}
+            {{ Form::select('equipo_id', $equipos, $jugadore->equipo_id, ['class' => 'form-control' . ($errors->has('equipo_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('equipo_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('rol_id') }}
-            {{ Form::text('rol_id', $jugadore->rol_id, ['class' => 'form-control' . ($errors->has('rol_id') ? ' is-invalid' : ''), 'placeholder' => 'Rol Id']) }}
+            {{ Form::select('rol_id', $roles, $jugadore->rol_id, ['class' => 'form-control' . ($errors->has('rol_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('rol_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('posicion_id') }}
-            {{ Form::text('posicion_id', $jugadore->posicion_id, ['class' => 'form-control' . ($errors->has('posicion_id') ? ' is-invalid' : ''), 'placeholder' => 'Posicion Id']) }}
+            {{ Form::select('posicion_id', $posiciones, $jugadore->posicion_id, ['class' => 'form-control' . ($errors->has('posicion_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('posicion_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('imagen') }}
-            {{ Form::text('imagen', $jugadore->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {{ Form::file('imagen', ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

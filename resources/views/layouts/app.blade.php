@@ -51,6 +51,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('partidos.index') }}">Partidos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('jugadores.index') }}">Jugadores</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
