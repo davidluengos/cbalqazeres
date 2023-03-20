@@ -54,9 +54,9 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
                     <span>Síguenos:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" target="_blank" href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -94,9 +94,9 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cáceres</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://www.instagram.com/cbalqazeres/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
