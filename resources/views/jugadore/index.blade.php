@@ -53,9 +53,9 @@
                                             
 											<td>{{ $jugadore->nombre }}</td>
 											<td>{{ $jugadore->numero }}</td>
-											<td>{{ $jugadore->equipo_id }}</td>
-											<td>{{ $jugadore->rol_id }}</td>
-											<td>{{ $jugadore->posicion_id }}</td>
+											<td>{{ $jugadore->equipo->nombre }}</td>
+											<td>{{ $jugadore->role->nombre }}</td>
+											<td>{{ $jugadore->posicione->nombre }}</td>
 											<td>{{ $jugadore->imagen }}</td>
 
                                             <td>

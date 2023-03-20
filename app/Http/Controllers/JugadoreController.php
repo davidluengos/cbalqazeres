@@ -88,8 +88,10 @@ class JugadoreController extends Controller
     public function edit($id)
     {
         $jugadore = Jugadore::find($id);
-
-        return view('jugadore.edit', compact('jugadore'));
+        $posiciones = Posicione::all()->pluck('nombre', 'id');
+        $equipos = Equipo::all()->pluck('nombre', 'id');
+        $roles = Role::all()->pluck('nombre', 'id');
+        return view('jugadore.edit', compact('jugadore', 'posiciones', 'equipos', 'roles'));
     }
 
     /**
@@ -105,6 +107,15 @@ class JugadoreController extends Controller
 
         $jugadore->update($request->all());
 
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $jugadore->imagen = '/storage/img/equipos/'.$jugadore->equipo_id.'/'.$nombreOriginal;
+            $file->move(public_path() . '/storage/img/equipos/' . $jugadore->equipo_id.'/' , $nombreOriginal);
+            $jugadore->save();
+        }
+        
         return redirect()->route('jugadores.index')
             ->with('success', 'Jugadore updated successfully');
     }

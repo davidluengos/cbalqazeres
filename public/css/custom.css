@@ -1,11 +1,16 @@
 .texto-ultimopartido-resultado{
+    -webkit-text-stroke: 1px green;
     font-size: 3em;
     font-weight: 900;
-    color: red;
+    color: yellow;
     
 }
 
 .texto-ultimopartido-equipo{
     color:green;
     
+}
+
+.bold-text{
+    font-weight: bold;
 }

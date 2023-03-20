@@ -19,9 +19,8 @@ class HomeController extends Controller
     {
         $proximoPartido = Partido::where('fecha', '>' , now())->orderBy('fecha')->first();
         $ultimosPartidos = Partido::where('fecha', '<' , now())->orderBy('fecha', 'desc')->take(3)->get();
-        //dd($ultimosPartidos);
-        $jugadores = Jugadore::all();
+        $jugadorasPrimerEquipo = Jugadore::where('equipo_id', 3)->orderBy('numero')->get();
         $title = 'CB Al-Qázeres Extremadura';
-        return view('front.home', compact('title', 'proximoPartido', 'jugadores', 'ultimosPartidos'));
+        return view('front.home', compact('title', 'proximoPartido', 'ultimosPartidos', 'jugadorasPrimerEquipo'));
     }
 }
