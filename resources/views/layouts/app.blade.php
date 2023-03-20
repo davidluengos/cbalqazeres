@@ -54,6 +54,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('jugadores.index') }}">Jugadores</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('patrocinador-tipos.index') }}">Tipos Patrocinador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('patrocinadores.index') }}">Patrocinadores</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

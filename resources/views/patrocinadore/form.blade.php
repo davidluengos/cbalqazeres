@@ -8,12 +8,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('tipo_patrocinador_id') }}
-            {{ Form::text('tipo_patrocinador_id', $patrocinadore->tipo_patrocinador_id, ['class' => 'form-control' . ($errors->has('tipo_patrocinador_id') ? ' is-invalid' : ''), 'placeholder' => 'Tipo Patrocinador Id']) }}
+            {{ Form::select('tipo_patrocinador_id', $patrocinadoresTipos, $patrocinadore->tipo_patrocinador_id, ['class' => 'form-control' . ($errors->has('tipo_patrocinador_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('tipo_patrocinador_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('imagen') }}
-            {{ Form::text('imagen', $patrocinadore->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {{ Form::file('imagen', ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

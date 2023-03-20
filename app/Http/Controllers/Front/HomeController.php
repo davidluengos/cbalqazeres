@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Jugadore;
 use App\Models\Partido;
+use App\Models\Patrocinadore;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,7 +21,8 @@ class HomeController extends Controller
         $proximoPartido = Partido::where('fecha', '>' , now())->orderBy('fecha')->first();
         $ultimosPartidos = Partido::where('fecha', '<' , now())->orderBy('fecha', 'desc')->take(3)->get();
         $jugadorasPrimerEquipo = Jugadore::where('equipo_id', 3)->orderBy('numero')->get();
+        $patrocinadores = Patrocinadore::all();
         $title = 'CB Al-Qázeres Extremadura';
-        return view('front.home', compact('title', 'proximoPartido', 'ultimosPartidos', 'jugadorasPrimerEquipo'));
+        return view('front.home', compact('title', 'proximoPartido', 'ultimosPartidos', 'jugadorasPrimerEquipo', 'patrocinadores'));
     }
 }

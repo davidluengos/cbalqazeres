@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Patrocinadore;
+use App\Models\PatrocinadorTipo;
 use Illuminate\Http\Request;
 
 /**
@@ -31,8 +32,9 @@ class PatrocinadoreController extends Controller
      */
     public function create()
     {
+        $patrocinadoresTipos = PatrocinadorTipo::all()->pluck('nombre', 'id');
         $patrocinadore = new Patrocinadore();
-        return view('patrocinadore.create', compact('patrocinadore'));
+        return view('patrocinadore.create', compact('patrocinadore', 'patrocinadoresTipos'));
     }
 
     /**
@@ -46,6 +48,15 @@ class PatrocinadoreController extends Controller
         request()->validate(Patrocinadore::$rules);
 
         $patrocinadore = Patrocinadore::create($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $patrocinadore->imagen = '/storage/img/patrocinadores/' . $nombreOriginal;
+            $file->move(public_path() . '/storage/img/patrocinadores/' , $nombreOriginal);
+            $patrocinadore->save();
+        }
 
         return redirect()->route('patrocinadores.index')
             ->with('success', 'Patrocinadore created successfully.');
@@ -72,9 +83,10 @@ class PatrocinadoreController extends Controller
      */
     public function edit($id)
     {
+        $patrocinadoresTipos = PatrocinadorTipo::all()->pluck('nombre', 'id');
         $patrocinadore = Patrocinadore::find($id);
 
-        return view('patrocinadore.edit', compact('patrocinadore'));
+        return view('patrocinadore.edit', compact('patrocinadore', 'patrocinadoresTipos'));
     }
 
     /**
@@ -89,6 +101,15 @@ class PatrocinadoreController extends Controller
         request()->validate(Patrocinadore::$rules);
 
         $patrocinadore->update($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            
+            $patrocinadore->imagen = '/storage/img/patrocinadores/' . $nombreOriginal;
+            $file->move(public_path() . '/storage/img/patrocinadores/' , $nombreOriginal);
+            $patrocinadore->save();
+        }
 
         return redirect()->route('patrocinadores.index')
             ->with('success', 'Patrocinadore updated successfully');

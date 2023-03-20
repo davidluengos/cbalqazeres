@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'scoreboard';
+    src: url('/public/css/scoreboard.ttf');
+
+}
+
 .texto-ultimopartido-resultado{
     -webkit-text-stroke: 1px green;
     font-size: 3em;
@@ -11,6 +17,21 @@
     
 }
 
+.texto-slider{
+    -webkit-text-stroke: 5px green;
+    font-size: 4em;
+    font-weight: 900;
+    color: yellow;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
 .bold-text{
     font-weight: bold;
 }
+
+.centrar{
+    width: 150px;
+    margin:auto;
+    display:block;
+}
+

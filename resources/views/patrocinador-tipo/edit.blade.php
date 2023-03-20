@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('patrocinador-tipos.update', $patrocinadorTipo->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                            {{ method_field('PUT') }}
                             @csrf
 
                             @include('patrocinador-tipo.form')

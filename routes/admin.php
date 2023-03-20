@@ -5,9 +5,10 @@ use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\JugadoreController;
 use App\Http\Controllers\PartidoController;
+use App\Http\Controllers\PatrocinadoreController;
+use App\Http\Controllers\PatrocinadorTipoController;
 use App\Http\Controllers\PosicioneController;
 use App\Http\Controllers\RoleController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,3 +92,21 @@ Route::get('/jugadores/{jugadore}/ver', [JugadoreController::class, 'show'])->mi
 Route::get('/jugadores/{jugadore}/editar', [JugadoreController::class, 'edit'])->middleware('auth')->name('jugadores.edit');
 Route::put('/jugadores/{jugadore}/actualizar', [JugadoreController::class, 'update'])->middleware('auth')->name('jugadores.update');
 Route::delete('/jugadores/{jugadore}/delete', [JugadoreController::class, 'destroy'])->middleware('auth')->name('jugadores.destroy');
+
+//Tipos de Patrocinadores
+Route::get('/patrocinadorestipos', [PatrocinadorTipoController::class, 'index'])->middleware('auth')->name('patrocinador-tipos.index');
+Route::get('/patrocinadorestipos/crear', [PatrocinadorTipoController::class, 'create'])->middleware('auth')->name('patrocinador-tipos.create');
+Route::post('/patrocinadorestipos/almacenar', [PatrocinadorTipoController::class, 'store'])->middleware('auth')->name('patrocinador-tipos.store');
+Route::get('/patrocinadorestipos/{patrocinadortipo}/ver', [PatrocinadorTipoController::class, 'show'])->middleware('auth')->name('patrocinador-tipos.show');
+Route::get('/patrocinadorestipos/{patrocinadortipo}/editar', [PatrocinadorTipoController::class, 'edit'])->middleware('auth')->name('patrocinador-tipos.edit');
+Route::put('/patrocinadorestipos/{patrocinadortipo}/actualizar', [PatrocinadorTipoController::class, 'update'])->middleware('auth')->name('patrocinador-tipos.update');
+Route::delete('/patrocinadorestipos/{patrocinadortipo}/delete', [PatrocinadorTipoController::class, 'destroy'])->middleware('auth')->name('patrocinador-tipos.destroy');
+
+//Patrocinadores
+Route::get('/patrocinadores', [PatrocinadoreController::class, 'index'])->middleware('auth')->name('patrocinadores.index');
+Route::get('/patrocinadores/crear', [PatrocinadoreController::class, 'create'])->middleware('auth')->name('patrocinadores.create');
+Route::post('/patrocinadores/almacenar', [PatrocinadoreController::class, 'store'])->middleware('auth')->name('patrocinadores.store');
+Route::get('/patrocinadores/{patrocinadore}/ver', [PatrocinadoreController::class, 'show'])->middleware('auth')->name('patrocinadores.show');
+Route::get('/patrocinadores/{patrocinadore}/editar', [PatrocinadoreController::class, 'edit'])->middleware('auth')->name('patrocinadores.edit');
+Route::put('/patrocinadores/{patrocinadore}/actualizar', [PatrocinadoreController::class, 'update'])->middleware('auth')->name('patrocinadores.update');
+Route::delete('/patrocinadores/{patrocinadore}/delete', [PatrocinadoreController::class, 'destroy'])->middleware('auth')->name('patrocinadores.destroy');
