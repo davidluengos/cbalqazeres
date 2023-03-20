@@ -104,8 +104,20 @@
             <h2>¡Gracias por vuestro apoyo!</h2>
         </div>
         <div class="row">
-            @foreach ($patrocinadores as $patrocinador)
-            <img class="centrar" src="{{$patrocinador->imagen}}" alt="Imagen de Prueba">
+            @foreach ($patrocinadoresPrincipales as $patrocinador)
+            <img class="patrocinadoresPrincipales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+            @endforeach
+        </div>
+        <hr>
+        <div class="row">
+            @foreach ($patrocinadoresInstitucionales as $patrocinador)
+            <img class="patrocinadoresInstitucionales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+            @endforeach
+        </div>
+        <hr>
+        <div class="row">
+            @foreach ($patrocinadoresNormales as $patrocinador)
+            <img class="patrocinadoresNormales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
             @endforeach
         </div>
     </div>

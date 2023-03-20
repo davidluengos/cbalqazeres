@@ -211,8 +211,11 @@
         </div>
 
         <div class="row g-4 portfolio-container">
+            @php
+                $decimaSegundo = 1;
+            @endphp
             @foreach ($jugadorasPrimerEquipo as $jugadora)
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.{{$decimaSegundo}}s">
                 <div class="portfolio-inner rounded">
                     <img class="img-fluid" src="{{$jugadora->imagen}}" alt="">
                     <div class="portfolio-text">
@@ -226,6 +229,9 @@
                     </div>
                 </div>
             </div>
+            @php
+                $decimaSegundo++;
+            @endphp
             @endforeach
 
         </div>

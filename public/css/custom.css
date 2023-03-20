@@ -29,8 +29,20 @@
     font-weight: bold;
 }
 
-.centrar{
-    width: 150px;
+.patrocinadoresPrincipales{
+    width: 300px;
+    margin:auto;
+    display:block;
+}
+
+.patrocinadoresInstitucionales{
+    width: 220px;
+    margin:auto;
+    display:block;
+}
+
+.patrocinadoresNormales{
+    width: 180px;
     margin:auto;
     display:block;
 }

@@ -1,0 +1,6 @@
+.git
+.env
+/.gitignore
+rsync.txt
+/public/storage
+/vendor
