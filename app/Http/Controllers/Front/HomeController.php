@@ -22,7 +22,7 @@ class HomeController extends Controller
         $ultimosPartidos = Partido::where('fecha', '<' , now())->orderBy('fecha', 'desc')->take(3)->get();
         $jugadorasPrimerEquipo = Jugadore::where('equipo_id', 3)->orderBy('numero')->get();
         $patrocinadores = Patrocinadore::all();
-        $title = 'CB Al-Qázeres Extremadura';
+        $title = 'Inicio';
         return view('front.home', compact('title', 'proximoPartido', 'ultimosPartidos', 'jugadorasPrimerEquipo', 'patrocinadores'));
     }
 }

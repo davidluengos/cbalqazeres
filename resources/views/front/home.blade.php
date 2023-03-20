@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <!-- Carousel Start -->
 <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -43,11 +44,13 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-times text-primary"></i>
+                            <i class="fa fa-users text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>No Hidden Cost</h4>
-                            <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                            <a href="/docs/ALTA_ABONADOS_ 22-23.pdf">
+                                <h4>Hazte Socio</h4>
+                                <span>Anima al equipo en Liga Femenina Challenge.</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -59,8 +62,10 @@
                             <i class="fa fa-users text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>Dedicated Team</h4>
-                            <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                            <a href="/cantera">
+                                <h4>Nuestra Cantera</h4>
+                                <span>Disfruta con nosotros del baloncesto. ¡Cada vez somos más!</span>
+                            </a>
                         </div>
                     </div>
                 </div>

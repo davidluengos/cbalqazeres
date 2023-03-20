@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CB Al-Qázeres Extremadura</title>
+    <title>CB Alqázeres Extremadura - {{$title}}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -67,7 +67,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="{{$jugadorasPrimerEquipo[0]->equipo->imagen}}" alt="" width="60px">
+            <img src="/img/logo_alqazeres.jpg" alt="" width="60px">
             <h1 class="m-0">&nbsp Alter Enersun Al-Qázeres Extremadura</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,10 +83,22 @@
     </nav>
     <!-- Navbar End -->
 
+
+    @if ($title != 'Inicio')
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-3 text-white mb-4 animated slideInDown">{{$title}}</h1>
+            </div>
+        </div>
+        <!-- Page Header End -->
+    @endif
+
+
     @yield('content')
 
     <!-- Patrocinadores Start -->
-    <div class="container">
+    <div class="container-xxl py-5">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-bold text-primary">Patrocinadores y Colaboradores</p>
             <h2>¡Gracias por vuestro apoyo!</h2>
@@ -104,7 +116,7 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
+                    <h4 class="text-white mb-4">CB Al-Qázeres</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cáceres</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p>
                     <div class="d-flex pt-2">
@@ -114,28 +126,20 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Landscaping</a>
-                    <a class="btn btn-link" href="">Pruning plants</a>
-                    <a class="btn btn-link" href="">Urban Gardening</a>
-                    <a class="btn btn-link" href="">Garden Maintenance</a>
-                    <a class="btn btn-link" href="">Green Technology</a>
+                    <!-- <h4 class="text-white mb-4">Enlaces</h4> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="/aviso-legal">Aviso Legal</a>
+                    <a class="btn btn-link" href="">Cookies</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <!-- <h4 class="text-white mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative w-100">
                         <input class="form-control bg-light border-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
