@@ -32,7 +32,21 @@
         font-size: 6vw;
     }
  
- }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .titulo-movil{
+        font-size: 2.5vw;
+    }
+    br { display: none; }
+}
+@media only screen and (max-width: 600px) {
+
+    .titulo-movil{
+        font-size: 0.9em;
+    }
+}
 
 .bold-text{
     font-weight: bold;
@@ -54,5 +68,10 @@
     width: 180px;
     margin:auto;
     display:block;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
 }
 
