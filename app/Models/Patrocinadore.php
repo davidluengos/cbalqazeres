@@ -44,4 +44,19 @@ class Patrocinadore extends Model
     }
     
 
+    //Funciones para mostrar los patrocinadores directamente en la plantilla blade del footer, sin pasar por el controlador
+    public function patrocinadoresPrincipales(){
+        $patrocinadoresPrincipales = $this->where('tipo_patrocinador_id',  3)->get();
+        return $patrocinadoresPrincipales;
+    } 
+    public function patrocinadoresInstitucionales(){
+        $patrocinadoresInstitucionales = $this->where('tipo_patrocinador_id',  4)->get();
+        return $patrocinadoresInstitucionales;
+    } 
+    public function patrocinadoresNormales(){
+        $patrocinadoresNormales = $this->where('tipo_patrocinador_id',  5)->get();
+        return $patrocinadoresNormales;
+    } 
+
+    
 }

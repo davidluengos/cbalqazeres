@@ -17,7 +17,6 @@ class AvisoLegalController extends Controller
     public function __invoke(Request $request)
     {
         $title = 'Aviso Legal';
-        $patrocinadores = Patrocinadore::all();
-        return view('front.avisolegal', compact('title', 'patrocinadores'));
+        return view('front.avisolegal', compact('title'));
     }
 }

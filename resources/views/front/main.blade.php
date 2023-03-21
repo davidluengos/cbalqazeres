@@ -68,15 +68,16 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="/img/logo_alqazeres.jpg" alt="" width="60px">
-            <h1 class="m-0">&nbsp Alter Enersun Al-Qázeres Extremadura</h1>
+            <h1 class="m-0 titulo-movil">&nbsp Alter Enersun</br>&nbspAl-Qázeres Extremadura</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="#partidos" class="nav-item nav-link">Partidos</a>
-                <a href="#plantilla" class="nav-item nav-link">Plantilla</a>
+                <a href="http://cbalqazeres.es/#partidos" class="nav-item nav-link">Partidos</a>
+                <a href="http://cbalqazeres.es/#plantilla" class="nav-item nav-link">Plantilla</a>
+                <a href="/clasificacion" class="nav-item nav-link">Clasificación</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Contacto<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -97,6 +98,13 @@
 
     @yield('content')
 
+    @inject('patrocinadores', 'App\Models\Patrocinadore')
+    @php
+    $patrocinadoresPrincipales = $patrocinadores->patrocinadoresPrincipales();
+    $patrocinadoresInstitucionales = $patrocinadores->patrocinadoresInstitucionales();
+    $patrocinadoresNormales = $patrocinadores->patrocinadoresNormales();
+    @endphp
+
     <!-- Patrocinadores Start -->
     <div class="container-xxl py-5">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -105,19 +113,19 @@
         </div>
         <div class="row">
             @foreach ($patrocinadoresPrincipales as $patrocinador)
-            <img class="patrocinadoresPrincipales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+            <img class="patrocinadoresPrincipales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresInstitucionales as $patrocinador)
-            <img class="patrocinadoresInstitucionales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+            <img class="patrocinadoresInstitucionales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
             @endforeach
         </div>
         <hr>
         <div class="row">
             @foreach ($patrocinadoresNormales as $patrocinador)
-            <img class="patrocinadoresNormales" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
+            <img class="patrocinadoresNormales" data-wow-delay="0.1s" src="{{$patrocinador->imagen}}" alt="{{$patrocinador->nombre}}">
             @endforeach
         </div>
     </div>
