@@ -25,6 +25,15 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+@media only screen and (max-width: 800px) {
+
+    .texto-slider{
+        -webkit-text-stroke: 2px green;
+        font-size: 6vw;
+    }
+ 
+ }
+
 .bold-text{
     font-weight: bold;
 }
