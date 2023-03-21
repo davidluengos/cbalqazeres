@@ -99,17 +99,17 @@
                 <h1 class="display-5 mb-4">Últimos partidos</h1>
                 @foreach ($ultimosPartidos as $item)
                 <div>
-                    <div class="d-flex row-flex btn btn-light py-3 px-4 justify-content-center align-items-center  fs-5 fw-bold text-primary">
+                    <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center  fs-5 fw-bold text-primary">
                         {{date('d.m.Y', strtotime($item->fecha))}} en {{$item->localidad}}
                     </div>
-                    <div class="d-flex row-flex btn btn-light py-3 px-4 justify-content-center align-items-center">
-                        <div class="col-1"><img src="{{$item->equipoLocal->imagen}}" alt="{{$item->equipoLocal->nombre}}" width="60"></div>
-                        <div class="col-3 texto-ultimopartido-equipo">{{$item->equipoLocal->nombre}}</div>
-                        <div class="col-1 texto-ultimopartido-resultado">{{$item->resultado_local}}</div>
+                    <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center">
+                        <div class="col-xs-12 col-md-1 col-lg-12 col-xl-1"><img src="{{$item->equipoLocal->imagen}}" alt="{{$item->equipoLocal->nombre}}" width="60"></div>
+                        <div class="col-xs-12 col-md-3 col-lg-12 col-xl-3 texto-ultimopartido-equipo">{{$item->equipoLocal->nombre}}</div>
+                        <div class="col-xs-12 col-md-1 col-lg-12 col-xl-1 texto-ultimopartido-resultado">{{$item->resultado_local}}</div>
                         <div class="col-2"></div>
-                        <div class="col-1"><img src="{{$item->equipoVisitante->imagen}}" alt="{{$item->equipoVisitante->nombre}}" width="60"></div>
-                        <div class="col-3 texto-ultimopartido-equipo">{{$item->equipoVisitante->nombre}}</div>
-                        <div class="col-1 texto-ultimopartido-resultado">{{$item->resultado_visitante}}</div>
+                        <div class="col-xs-12 col-md-1 col-lg-12 col-xl-1"><img src="{{$item->equipoVisitante->imagen}}" alt="{{$item->equipoVisitante->nombre}}" width="60"></div>
+                        <div class="col-xs-12 col-md-3 col-lg-12 col-xl-3 texto-ultimopartido-equipo">{{$item->equipoVisitante->nombre}}</div>
+                        <div class="col-xs-12 col-md-1 col-lg-12 col-xl-1 texto-ultimopartido-resultado">{{$item->resultado_visitante}}</div>
                     </div>
                     <p></p>
                 </div>
