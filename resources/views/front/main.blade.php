@@ -146,7 +146,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <!-- <h4 class="text-white mb-4">Enlaces</h4> -->
+                    <h4 class="text-white mb-4">Secciones</h4>
+                    <a class="btn btn-link" href="http://cbalqazeres.es/#partidos">Partidos</a>
+                    <a class="btn btn-link" href="/clasificacion">Clasificación</a>
+                    <a class="btn btn-link" href="http://cbalqazeres.es/#plantilla">Plantilla </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Enlaces</h4>
@@ -154,6 +157,17 @@
                     <a class="btn btn-link" href="">Cookies</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
+                        <!-- <div class="row">
+                            <div class="col-4">
+                                <img class="w-75" data-wow-delay="0.1s"  src="/storage/img/lfc.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="w-75" data-wow-delay="0.1s" src="/storage/img/lfc.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="w-75" data-wow-delay="0.1s"  src="/storage/img/lfc.jpg" alt="">
+                            </div>
+                        </div> -->
                     <!-- <h4 class="text-white mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative w-100">
