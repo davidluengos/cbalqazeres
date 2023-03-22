@@ -148,8 +148,9 @@
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
                             <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
-                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                    <i class="fa fa-calendar fa-3x text-primary"></i>
+                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 120px; height: 120px;">
+                                    <img src="/img/lfchallenge-green.png" alt="" style="width: 90px;">
+                                    <!-- <i class="fa fa-calendar fa-3x text-primary"></i> -->
                                 </div>
                                 <h4 class="mb-0">{{date('d.m.Y', strtotime($proximoPartido->fecha))}}</h4>
                                 <h3 class="mb-0">{{date('H:i', strtotime($proximoPartido->fecha))}}</h3>
