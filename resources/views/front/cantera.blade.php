@@ -10,16 +10,11 @@
         </div>
     </div>
 </div>
-    <!-- Carousel Start -->
-<div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="img/cabecera.jpg" alt="Image">
-            </div>
-        </div>
+
+<!-- Imagen retro Start -->
+   <div class="" > 
+        <img src="img/foto-cantera-2223.jpg" class="w-100" alt="Responsive image">
     </div>
-</div>
-<!-- Carousel End -->
+<!-- Imagen retro End -->
 
 @endsection
