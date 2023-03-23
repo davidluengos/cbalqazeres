@@ -44,7 +44,7 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-users text-primary"></i>
+                            <i class="fa fa-pen text-primary"></i>
                         </div>
                         <div class="ps-3">
                             <a href="/docs/ALTA_ABONADOS_ 22-23.pdf">
@@ -74,11 +74,13 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-phone text-primary"></i>
+                            <i class="fa fa-circle text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>24/7 Available</h4>
-                            <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                            <a href="http://adcbaloncesto.es">
+                                <h4>ADC Baloncesto</h4>
+                                <span>Visita la web del ADC. ¡Juntos somos mejores!</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +120,7 @@
 
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="display-5 mb-4">Próximo partido</h1>
                 @if ($proximoPartido == null)
                     <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center  fs-5 fw-bold text-primary">
