@@ -156,7 +156,8 @@
                                 </div>
                                 <h4 class="mb-0">{{date('d.m.Y', strtotime($proximoPartido->fecha))}}</h4>
                                 <h3 class="mb-0">{{date('H:i', strtotime($proximoPartido->fecha))}}</h3>
-                                <p>{{$proximoPartido->pabellon}} </br> {{$proximoPartido->localidad}}</p>
+                                <p class="mb-0">{{$proximoPartido->pabellon}}</p>
+                                <p class="mb-0">{{$proximoPartido->localidad}}</p>
                             </div>
                         </div>
                     </div>
@@ -214,7 +215,8 @@
                 $decimaSegundo = 1;
             @endphp
             @foreach ($jugadorasPrimerEquipo as $jugadora)
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.{{$decimaSegundo}}s">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.{{$decimaSegundo}}s"> -->
+            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp">
                 <div class="portfolio-inner rounded">
                     <img class="img-fluid" src="{{$jugadora->imagen}}" alt="">
                     <div class="portfolio-text">
