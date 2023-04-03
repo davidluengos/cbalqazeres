@@ -60,6 +60,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('patrocinadores.index') }}">Patrocinadores</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('noticias.index') }}">Noticias</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

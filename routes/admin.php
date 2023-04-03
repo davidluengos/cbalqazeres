@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\JugadoreController;
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\PartidoController;
 use App\Http\Controllers\PatrocinadoreController;
 use App\Http\Controllers\PatrocinadorTipoController;
@@ -110,3 +111,12 @@ Route::get('/patrocinadores/{patrocinadore}/ver', [PatrocinadoreController::clas
 Route::get('/patrocinadores/{patrocinadore}/editar', [PatrocinadoreController::class, 'edit'])->middleware('auth')->name('patrocinadores.edit');
 Route::put('/patrocinadores/{patrocinadore}/actualizar', [PatrocinadoreController::class, 'update'])->middleware('auth')->name('patrocinadores.update');
 Route::delete('/patrocinadores/{patrocinadore}/delete', [PatrocinadoreController::class, 'destroy'])->middleware('auth')->name('patrocinadores.destroy');
+
+//Noticias
+Route::get('/noticias', [NoticiaController::class, 'index'])->middleware('auth')->name('noticias.index');
+Route::get('/noticias/crear', [NoticiaController::class, 'create'])->middleware('auth')->name('noticias.create');
+Route::post('/noticias/almacenar', [NoticiaController::class, 'store'])->middleware('auth')->name('noticias.store');
+Route::get('/noticias/{noticia}/ver', [NoticiaController::class, 'show'])->middleware('auth')->name('noticias.show');
+Route::get('/noticias/{noticia}/editar', [NoticiaController::class, 'edit'])->middleware('auth')->name('noticias.edit');
+Route::put('/noticias/{noticia}/actualizar', [NoticiaController::class, 'update'])->middleware('auth')->name('noticias.update');
+Route::delete('/noticias/{noticia}/delete', [NoticiaController::class, 'destroy'])->middleware('auth')->name('noticias.destroy');

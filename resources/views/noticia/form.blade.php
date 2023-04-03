@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('contenido') }}
-            {{ Form::text('contenido', $noticia->contenido, ['class' => 'form-control' . ($errors->has('contenido') ? ' is-invalid' : ''), 'placeholder' => 'Contenido']) }}
+            {{ Form::textarea('contenido', $noticia->contenido, ['class' => 'form-control' . ($errors->has('contenido') ? ' is-invalid' : ''), 'placeholder' => 'Contenido']) }}
             {!! $errors->first('contenido', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
