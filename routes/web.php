@@ -4,6 +4,8 @@ use App\Http\Controllers\Front\AvisoLegalController;
 use App\Http\Controllers\Front\CanteraController;
 use App\Http\Controllers\Front\ClasificacionController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\NoticiaController;
+use App\Http\Controllers\Front\NoticiasController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +32,6 @@ Route::get('/', HomeController::class)->name('front.home');
 Route::get('/aviso-legal', AvisoLegalController::class)->name('front.avisolegal');
 Route::get('/cantera', CanteraController::class)->name('front.cantera');
 Route::get('/clasificacion', ClasificacionController::class)->name('front.clasificacion');
+Route::get('/noticias', NoticiasController::class)->name('front.noticias');
+Route::get('/noticias/{noticia}', NoticiaController::class)->name('front.noticia');
 

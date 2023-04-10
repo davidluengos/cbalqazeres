@@ -75,3 +75,9 @@ iframe {
     height: 400px;
 }
 
+.align-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+

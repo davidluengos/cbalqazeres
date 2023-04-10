@@ -106,6 +106,7 @@
 
         <main class="py-4">
             @yield('content')
+            @yield('js')
         </main>
     </div>
 </body>

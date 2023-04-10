@@ -47,6 +47,15 @@ class NoticiaController extends Controller
 
         $noticia = Noticia::create($request->all());
 
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            $numeroConCeros = str_pad($noticia->id, 4, "0", STR_PAD_LEFT);
+            $noticia->imagen = '/storage/img/noticias/'. $numeroConCeros. '-'.$nombreOriginal;
+            $file->move(public_path() . '/storage/img/noticias/' , $numeroConCeros. '-'.$nombreOriginal);
+            $noticia->save();
+        }
+
         return redirect()->route('noticias.index')
             ->with('success', 'Noticia created successfully.');
     }
@@ -89,6 +98,15 @@ class NoticiaController extends Controller
         request()->validate(Noticia::$rules);
 
         $noticia->update($request->all());
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $nombreOriginal = $file->getClientOriginalName();
+            $numeroConCeros = str_pad($noticia->id, 4, "0", STR_PAD_LEFT);
+            $noticia->imagen = '/storage/img/noticias/'. $numeroConCeros. '-'.$nombreOriginal;
+            $file->move(public_path() . '/storage/img/noticias/' , $numeroConCeros. '-'.$nombreOriginal);
+            $noticia->save();
+        }
 
         return redirect()->route('noticias.index')
             ->with('success', 'Noticia updated successfully');

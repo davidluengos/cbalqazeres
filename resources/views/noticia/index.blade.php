@@ -51,7 +51,7 @@
                                             
 											<td>{{ $noticia->fecha }}</td>
 											<td>{{ $noticia->titulo }}</td>
-											<td>{{ $noticia->contenido }}</td>
+											<td>{{ Str::limit($noticia->contenido, $limit = 200, $end = '...') }}</td>
 											<td>{{ $noticia->imagen }}</td>
 
                                             <td>
