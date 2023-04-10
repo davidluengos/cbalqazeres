@@ -101,8 +101,9 @@
                 <h1 class="display-5 mb-4">Últimos partidos</h1>
                 @foreach ($ultimosPartidos as $item)
                 <div>
-                    <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center  fs-5 fw-bold text-primary">
+                    <div class="d-flex row btn btn-light py-3 justify-content-center align-items-center fs-5 fw-bold text-primary">
                         {{date('d.m.Y', strtotime($item->fecha))}} en {{$item->localidad}}
+                        <p class="fw-normal">{{$item->comentario}}</p>
                     </div>
                     <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center">
                         <div class="col-xs-12 col-md-1 col-lg-12 col-xl-1"><img src="{{$item->equipoLocal->imagen}}" alt="{{$item->equipoLocal->nombre}}" width="60"></div>
@@ -158,6 +159,7 @@
                                 <h3 class="mb-0">{{date('H:i', strtotime($proximoPartido->fecha))}}</h3>
                                 <p class="mb-0">{{$proximoPartido->pabellon}}</p>
                                 <p class="mb-0">{{$proximoPartido->localidad}}</p>
+                                <p class="text-primary">{{$proximoPartido->comentario}}</p>
                             </div>
                         </div>
                     </div>
