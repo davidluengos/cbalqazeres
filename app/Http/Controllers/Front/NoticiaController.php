@@ -14,9 +14,11 @@ class NoticiaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, Noticia $noticia)
+    public function __invoke(Request $request, String $slug)
     {
+        //$slug = $noticia->slug;
+        $noticia = Noticia::where('slug', $slug)->firstOrFail();
         $title = $noticia->titulo;
-        return view('front.noticia', compact('title','noticia'));
+        return view('front.noticia', compact('title', 'noticia', 'slug'));
     }
 }

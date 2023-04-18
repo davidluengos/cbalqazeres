@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Noticia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 /**
  * Class NoticiaController
@@ -55,6 +56,9 @@ class NoticiaController extends Controller
             $file->move(public_path() . '/storage/img/noticias/' , $numeroConCeros. '-'.$nombreOriginal);
             $noticia->save();
         }
+
+        $noticia->slug = Str::slug($noticia->titulo, '-');
+        $noticia->save();
 
         return redirect()->route('noticias.index')
             ->with('success', 'Noticia created successfully.');

@@ -33,5 +33,5 @@ Route::get('/aviso-legal', AvisoLegalController::class)->name('front.avisolegal'
 Route::get('/cantera', CanteraController::class)->name('front.cantera');
 Route::get('/clasificacion', ClasificacionController::class)->name('front.clasificacion');
 Route::get('/noticias', NoticiasController::class)->name('front.noticias');
-Route::get('/noticias/{noticia}', NoticiaController::class)->name('front.noticia');
+Route::get('/noticias/{slug}', NoticiaController::class)->name('front.noticia');
 

@@ -6,5 +6,5 @@ rsync.txt
 /vendor
 /public/.htaccess
 
-#cd /mtn/c/xampp/htdocs/cbalqazeres
+#cd /mnt/c/xampp/htdocs/cbalqazeres
 #rsync -avz --force --progress --exclude-from=exclude.txt ./. cbalqazeres@51.178.156.7:/home/cbalqazeres/public_html/maindomain/
