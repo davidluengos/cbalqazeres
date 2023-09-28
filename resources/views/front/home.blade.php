@@ -14,7 +14,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <h1 class="display-1 text-white mb-5 animated slideInDown"></h1>
+                                {{-- <h1 class="display-1 text-white mb-5 animated slideInDown"></h1> --}}
                                 <p class="texto-slider">#DISFRUTADELRETO</p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
         </div>
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-5 mb-4">Últimos partidos</h1>
+                <h2 class="display-5 mb-4">Últimos partidos</h2>
                 @foreach ($ultimosPartidos as $item)
                 <div>
                     <div class="d-flex row btn btn-light py-3 justify-content-center align-items-center fs-5 fw-bold text-primary">
@@ -122,7 +122,7 @@
             </div>
 
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-5 mb-4">Próximo partido</h1>
+                <h2 class="display-5 mb-4">Próximo partido</h2>
                 @if ($proximoPartido == null)
                     <div class="d-flex row btn btn-light py-3 px-4 justify-content-center align-items-center  fs-5 fw-bold text-primary">
                         <p>No hay partidos a la vista</p>
@@ -178,19 +178,19 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                <h4 class="display-4 text-white" data-toggle="counter-up">1234</h4>
                 <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                <h4 class="display-4 text-white" data-toggle="counter-up">1234</h4>
                 <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                <h4 class="display-4 text-white" data-toggle="counter-up">1234</h4>
                 <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                <h1 class="display-4 text-white" data-toggle="counter-up">1333</h1>
+                <h4 class="display-4 text-white" data-toggle="counter-up">1333</h4>
                 <span class="fs-5 fw-semi-bold text-light">CB Al-Qázeres</span>
             </div>
         </div>
@@ -209,7 +209,7 @@
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-bold text-primary">Plantilla</p>
-            <h1 class="display-5 mb-5">{{$jugadorasPrimerEquipo[0]->equipo->nombre}}</h1>
+            <h2 class="display-5 mb-5">{{$jugadorasPrimerEquipo[0]->equipo->nombre}}</h2>
         </div>
 
         <div class="row g-4 portfolio-container">
