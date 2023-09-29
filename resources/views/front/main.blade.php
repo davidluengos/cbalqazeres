@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CB Alqázeres Extremadura - {{$title}}</title>
+    <title>CB Al-Qázeres Extremadura - {{$title}}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Toda la información sobre el Club Baloncesto Al-Qázeres Extremadura que milita en Liga Femenina Challenge" name="description">
 
     <!-- Favicon -->
     <link href="/img/favicon.ico" rel="icon">
