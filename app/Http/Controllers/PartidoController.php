@@ -20,7 +20,24 @@ class PartidoController extends Controller
      */
     public function index()
     {
-        $partidos = Partido::paginate();
+        $partidos = Partido::where('id', '>', 0)
+            ->orderBy('fecha', 'desc')
+            ->paginate();
+
+        return view('partido.index', compact('partidos'))
+            ->with('i', (request()->input('page', 1) - 1) * $partidos->perPage());
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexSinResultados()
+    {
+        $partidos = Partido::where('resultado_local', null)
+            ->orderBy('fecha', 'asc')
+            ->paginate();
 
         return view('partido.index', compact('partidos'))
             ->with('i', (request()->input('page', 1) - 1) * $partidos->perPage());
