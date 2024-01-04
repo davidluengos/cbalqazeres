@@ -72,6 +72,11 @@ class Partido extends Model
     {
         return $this->hasOne('App\Models\Equipo', 'id', 'equipo_local_id');
     }
+
+    public function temporada()
+    {
+        return $this->belongsTo(Temporada::class);
+    }
     
 
 }
