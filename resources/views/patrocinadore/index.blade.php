@@ -37,7 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Nombre</th>
-										<th>Tipo Patrocinador Id</th>
+										<th>Tipo Patrocinador</th>
 										<th>Imagen</th>
 
                                         <th></th>
@@ -49,7 +49,7 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $patrocinadore->nombre }}</td>
-											<td>{{ $patrocinadore->tipo_patrocinador_id }}</td>
+											<td>{{ $patrocinadore->patrocinadorTipo->nombre }}</td>
 											<td>{{ $patrocinadore->imagen }}</td>
 
                                             <td>
