@@ -78,6 +78,7 @@ Route::delete('/equipos/{equipo}/delete', [EquipoController::class, 'destroy'])-
 
 //Partidos
 Route::get('/partidos', [PartidoController::class, 'index'])->middleware('auth')->name('partidos.index');
+Route::get('/partidosSinResultados', [PartidoController::class, 'indexSinResultados'])->middleware('auth')->name('partidosSinResultados.index');
 Route::get('/partidos/crear', [PartidoController::class, 'create'])->middleware('auth')->name('partidos.create');
 Route::post('/partidos/almacenar', [PartidoController::class, 'store'])->middleware('auth')->name('partidos.store');
 Route::get('/partidos/{partido}/ver', [PartidoController::class, 'show'])->middleware('auth')->name('partidos.show');
@@ -120,3 +121,12 @@ Route::get('/noticias/{noticia}/ver', [NoticiaController::class, 'show'])->middl
 Route::get('/noticias/{noticia}/editar', [NoticiaController::class, 'edit'])->middleware('auth')->name('noticias.edit');
 Route::put('/noticias/{noticia}/actualizar', [NoticiaController::class, 'update'])->middleware('auth')->name('noticias.update');
 Route::delete('/noticias/{noticia}/delete', [NoticiaController::class, 'destroy'])->middleware('auth')->name('noticias.destroy');
+
+//Temporadas
+Route::get('/temporadas', [App\Http\Controllers\TemporadaController::class, 'index'])->middleware('auth')->name('temporada.index');
+Route::get('/temporadas/crear', [App\Http\Controllers\TemporadaController::class, 'create'])->middleware('auth')->name('temporada.create');
+Route::post('/temporadas/almacenar', [App\Http\Controllers\TemporadaController::class, 'store'])->middleware('auth')->name('temporada.store');
+Route::get('/temporadas/{temporada}/ver', [App\Http\Controllers\TemporadaController::class, 'show'])->middleware('auth')->name('temporada.show');
+Route::get('/temporadas/{temporada}/editar', [App\Http\Controllers\TemporadaController::class, 'edit'])->middleware('auth')->name('temporada.edit');
+Route::put('/temporadas/{temporada}/actualizar', [App\Http\Controllers\TemporadaController::class, 'update'])->middleware('auth')->name('temporada.update');
+Route::delete('/temporadas/{temporada}/delete', [App\Http\Controllers\TemporadaController::class, 'destroy'])->middleware('auth')->name('temporada.destroy');
