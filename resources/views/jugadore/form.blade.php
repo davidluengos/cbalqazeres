@@ -26,6 +26,20 @@
             {{ Form::select('posicion_id', $posiciones, $jugadore->posicion_id, ['class' => 'form-control' . ($errors->has('posicion_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione...']) }}
             {!! $errors->first('posicion_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        
+        <div class="form-group">
+            {{ Form::label('activo', 'Activo') }}
+            <div class="form-check {{ $errors->has('activo') ? 'is-invalid' : '' }}">
+                {{ Form::radio('activo', '1', $jugadore->activo == '1', ['id' => 'activo1', 'class' => 'form-check-input']) }}
+                {{ Form::label('activo1', 'Sí', ['class' => 'form-check-label']) }}
+            </div>
+            <div class="form-check {{ $errors->has('activo') ? 'is-invalid' : '' }}">
+                {{ Form::radio('activo', '0', $jugadore->activo == '0', ['id' => 'activo0', 'class' => 'form-check-input']) }}
+                {{ Form::label('activo0', 'No', ['class' => 'form-check-label']) }}
+            </div>
+            {!! $errors->first('activo', '<div class="invalid-feedback d-block">:message</div>') !!}
+        </div>
+
         <div class="form-group">
             {{ Form::label('imagen') }}
             {{ Form::file('imagen', ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}

@@ -41,6 +41,10 @@
                             {{ $jugadore->posicion_id }}
                         </div>
                         <div class="form-group">
+                            <strong>Activo:</strong>
+                            {{ $jugadore->activo ? 'Sí' : 'No' }}
+                        </div>
+                        <div class="form-group">
                             <strong>Imagen:</strong>
                             {{ $jugadore->imagen }}
                         </div>

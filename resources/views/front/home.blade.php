@@ -209,16 +209,16 @@
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-bold text-primary">Plantilla</p>
-            <h2 class="display-5 mb-5">{{$jugadorasPrimerEquipo[0]->equipo->nombre}}</h2>
+            @if($jugadorasPrimerEquipo->count() == 0)
+                <h2>No hay plantilla disponible</h2>
+            @else
+                <h2 class="display-5 mb-5">{{$jugadorasPrimerEquipo[0]->equipo->nombre}}</h2>
+            @endif
         </div>
 
         <div class="row g-4 portfolio-container">
-            @php
-                $decimaSegundo = 1;
-            @endphp
             @foreach ($jugadorasPrimerEquipo as $jugadora)
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.{{$decimaSegundo}}s"> -->
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp">
+            <div class="col-lg-4 col-md-6 portfolio-item second wow ">
                 <div class="portfolio-inner rounded">
                     <img class="img-fluid" src="{{$jugadora->imagen}}" alt="">
                     <div class="portfolio-text">
@@ -232,13 +232,10 @@
                     </div>
                 </div>
             </div>
-            @php
-                $decimaSegundo++;
-            @endphp
             @endforeach
             
             @foreach ($staffPrimerEquipo as $staff)
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.{{$decimaSegundo}}s">
+            <div class="col-lg-4 col-md-6 portfolio-item second wow ">
                 <div class="portfolio-inner rounded">
                     <img class="img-fluid" src="{{$staff->imagen}}" alt="">
                     <div class="portfolio-text">
@@ -252,9 +249,6 @@
                     </div>
                 </div>
             </div>
-            @php
-                $decimaSegundo++;
-            @endphp
             @endforeach
 
         </div>

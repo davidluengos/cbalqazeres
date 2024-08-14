@@ -41,6 +41,7 @@
 										<th>Equipo Id</th>
 										<th>Rol Id</th>
 										<th>Posicion Id</th>
+                                        <th>Activo</th>
 										<th>Imagen</th>
 
                                         <th></th>
@@ -56,6 +57,7 @@
 											<td>{{ $jugadore->equipo->nombre }}</td>
 											<td>{{ $jugadore->role->nombre }}</td>
 											<td>{{ $jugadore->posicione->nombre }}</td>
+                                            <td>{{ $jugadore->activo ? 'Sí' : 'No' }}</td>
 											<td>{{ $jugadore->imagen }}</td>
 
                                             <td>

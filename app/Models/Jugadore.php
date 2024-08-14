@@ -42,7 +42,7 @@ class Jugadore extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','numero','equipo_id','rol_id','posicion_id','imagen'];
+    protected $fillable = ['nombre','numero','equipo_id','rol_id','posicion_id','activo','imagen'];
 
 
     /**
