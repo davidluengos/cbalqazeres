@@ -139,7 +139,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">CB Al-Qázeres</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cáceres</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p>
+                    {{-- <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@cbalqazeres.es</p> --}}
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://www.facebook.com/cbalqazeres"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" target="_blank" href="https://twitter.com/cb_alqazeres"><i class="fab fa-twitter"></i></a>
