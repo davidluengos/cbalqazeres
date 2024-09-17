@@ -47,8 +47,8 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center">
-                    <span class="far fa-envelope me-2"></span>
-                    <span>info@cbalqazeres.es</span>
+                    {{-- <span class="far fa-envelope me-2"></span>
+                    <span>info@cbalqazeres.es</span> --}}
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
