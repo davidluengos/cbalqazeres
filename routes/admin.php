@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\CategoriaController;
-use App\Http\Controllers\EquipoController;
-use App\Http\Controllers\GeneroController;
-use App\Http\Controllers\JugadoreController;
-use App\Http\Controllers\NoticiaController;
-use App\Http\Controllers\PartidoController;
-use App\Http\Controllers\PatrocinadoreController;
-use App\Http\Controllers\PatrocinadorTipoController;
-use App\Http\Controllers\PosicioneController;
-use App\Http\Controllers\RoleController;
+use App\Http\Controllers\Admin\CategoriaController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EquipoController;
+use App\Http\Controllers\Admin\GeneroController;
+use App\Http\Controllers\Admin\JugadoreController;
+use App\Http\Controllers\Admin\NoticiaController;
+use App\Http\Controllers\Admin\PartidoController;
+use App\Http\Controllers\Admin\PatrocinadoreController;
+use App\Http\Controllers\Admin\PatrocinadorTipoController;
+use App\Http\Controllers\Admin\PosicioneController;
+use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 //Auth::routes();
 
-//Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 //Roles
 Route::get('/roles', [RoleController::class, 'index'])->middleware('auth')->name('roles.index');

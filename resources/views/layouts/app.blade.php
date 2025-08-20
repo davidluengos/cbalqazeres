@@ -53,7 +53,9 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('layouts.sidebar')
+        @unless(Route::is('login') || Route::is('register') || Route::is('password.*'))
+            @include('layouts.sidebar')
+        @endunless
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/administrador', function () {
+Route::get('/admin', function () {
     return view('auth.login');
 });
 
